@@ -189,7 +189,7 @@ function session_start_wrap(){
   
   // testing 
   if (isset($_SESSION['user_object'])){
-    echo "<div><p>User is logged in.</p></div>";
+    //echo "<div><p>User is logged in.</p></div>";
   }
   else {
      echo "<div><p>User is anonymous</p></div>";

@@ -4,6 +4,7 @@ ob_start();
 <!DOCTYPE html>
 <head>
   <title>Memento</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="style/style.css">
 </head>
 <body>
 
@@ -18,9 +19,12 @@ session_start_wrap();
 
 
 if (isset($_SESSION['isLoggedIn']) && ($_SESSION['isLoggedIn'] == TRUE) ){
-  echo "<div><h3>Welcome</h3></div>";
-   echo "<div><a href=\"logout.php\">logout</a></div>";  
-   echo "<div>Session_id : ".session_id()."</div>"; 
+   $status = "logged in";
+   include_once "".$_SERVER['DOCUMENT_ROOT']."/memento/templates/page.php";
+   
+  //echo "<div><h3>Welcome</h3></div>";
+  // echo "<div><a href=\"logout.php\">logout</a></div>";  
+  // echo "<div>Session_id : ".session_id()."</div>"; 
 }
 else {
   include_once 'login.php';
