@@ -5,6 +5,18 @@ ob_start();
 <head>
   <title>Memento</title>
   <link rel="stylesheet" type="text/css" media="screen" href="style/style.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="style/modal.css">
+  <script type="text/javascript" src="http://cdn.jquerytools.org/1.2.5/jquery.tools.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script> 
+  
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js"></script>
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/webfont/1.0.22/webfont.js"></script>
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/yui/3.3.0/build/yui/yui-min.js"></script>
+   <script type="text/javascript" src="test.js"></script>
+   <!--
+   <script type="text/javascript" src=""></script>
+   --> 
 </head>
 <body>
 
@@ -40,7 +52,41 @@ else {
 }
 
 ?>
-
+<!-- modal wrapper start -->
+<div id="modal_wrapper">
+ 
+</div>
+<!-- modal wrapper end -->
+ <!-- dialog start  -->
+  <div id="dialog" class="create_note">
+    <div id="dialog_menu_wrap">
+      <div id="dialog_menu">
+        <ul>
+          <li class="selected"><div class="menu_item">Note</div></li>
+          <li><div class="menu_item">Tag</div></li>
+          <li><div class="menu_item">Group</div></li>
+          <li><div class="menu_item">People</div></li>
+          <li><div class="menu_item">Sharing</div></li>
+        </ul>  
+      </div>  
+    </div>
+    <!-- frm wrapper start -->
+    <div class="frm_wrapper">
+      <form>
+      <div class="frm_input">
+        <textarea class="note_body" rows='15' cols='65' name="note_body"></textarea>
+      </div>
+      <div class="frm_input frm_textarea">  
+        <textarea class="note_tags" rows='3' cols='35' name="note_tags"></textarea>
+      </div>  
+      </form>
+    </div>
+    <!-- frm wrapper end -->
+    <div class="frm_button">
+      <button class="left_b">clear</button> <button class="right_b">save</button>
+    </div>  
+  </div>
+  <!-- dialog end -->
 </body>
 </html>
 
