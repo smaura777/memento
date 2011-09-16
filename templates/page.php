@@ -10,10 +10,10 @@
       </div>
       <div class="top_menu">
         <ul>
-          <li>Add Entry</li>
-          <li>Add tags</li>
+          <li class="add_entry">Add Entry</li>
+          <li class="add_tags">Add tags</li>
           <li>Delete</li>
-          </ul>
+        </ul>
       </div>
    
     </div>

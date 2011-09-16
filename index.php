@@ -8,17 +8,25 @@ ob_start();
   <link rel="stylesheet" type="text/css" media="screen" href="style/modal.css">
   <script type="text/javascript" src="http://cdn.jquerytools.org/1.2.5/jquery.tools.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+  
+  <!--
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script> 
   
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js"></script>
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/webfont/1.0.22/webfont.js"></script>
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/yui/3.3.0/build/yui/yui-min.js"></script>
-   <script type="text/javascript" src="test.js"></script>
+   -->
+   
+   <script type="text/javascript" src="js/test.js"></script>
+    <script type="text/javascript" src="js/action.js"></script>
    <!--
    <script type="text/javascript" src=""></script>
    --> 
 </head>
 <body>
+
+ 
+
 
 <?php
 require_once "".$_SERVER['DOCUMENT_ROOT']."/memento/settings/dev.inc.php";
@@ -72,13 +80,25 @@ else {
     </div>
     <!-- frm wrapper start -->
     <div class="frm_wrapper">
-      <form>
+      <form enctype="application/x-www-form-urlencoded">
       <div class="frm_input">
-        <textarea class="note_body" rows='15' cols='65' name="note_body"></textarea>
+        <textarea class="note_body" rows='10' cols='80' name="note_body" placeholder="Enter a note here" required autofocus></textarea>
       </div>
       <div class="frm_input frm_textarea">  
-        <textarea class="note_tags" rows='3' cols='35' name="note_tags"></textarea>
+        <textarea class="note_tags" rows='2' cols='80' name="note_tags" placeholder="Enter tags here"></textarea>
       </div>  
+      
+      <div class="frm_input frm_select">  
+        <div><label>Groups</label></div>
+        <select>
+          <option value ="volvo">Volvo</option>
+          <option value ="saab">Saab</option>
+          <option value ="opel">Opel</option>
+          <option value ="audi">Audi</option>
+        </select>
+        <span>Create a group</span>
+      </div> 
+      
       </form>
     </div>
     <!-- frm wrapper end -->
@@ -87,6 +107,17 @@ else {
     </div>  
   </div>
   <!-- dialog end -->
+  
+
+  
+<script type="text/javascript">
+  $(function(){
+   // testing.hideModal('dialog');
+   // testing.hideModal('modal_wrapper');
+  });
+
+  
+</script>  
 </body>
 </html>
 

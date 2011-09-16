@@ -38,6 +38,10 @@
   border: 1px solid #000;
 } 
 
+#dialog textarea {
+  padding: 8px;
+}
+
 #dialog .frm_button {
   text-align: right;
   height: 58px;
@@ -107,8 +111,22 @@
   border-radius: 5px;
   margin-bottom: 6px;
   margin-left: 8px;
-  margin-top: 12px;
-  
+  margin-top: 12px;  
+}
+
+.frm_input select {
+  border: 1px solid #000;
+  width: 300px;
+  margin-left: 8px;
+  margin-top: 12px;  
+}
+
+#dialog {
+  display:none;
+}
+
+#modal_wrapper {
+  display:none;
 }
 
 
